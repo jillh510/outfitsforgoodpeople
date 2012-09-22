@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    <b> Hi, {{kidName|escape}}! Here's what you can wear
+
+    when it's {{ temperature }} degrees outside </b>
+
+    {% for clothing in articlesOfClothing %}
+      <blockquote>{{ clothing.name|escape }}</blockquote>
+
+      <div><img src='imgServing?img_id={{ clothing.name }}'></div>     
+    {% endfor %}
+
+    <form action="/" method="link">
+      <div><input type="submit" value="Back to main page"></div>
+    </form>
+
+    <a href="{{ url }}">{{ url_linktext }}</a>
+
+  </body>
+</html>

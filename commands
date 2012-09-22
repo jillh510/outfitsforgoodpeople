@@ -1,0 +1,1 @@
+appcfg.py download_data --application=s~outfitsforgoodpeople --url=http://outfitsforgoodpeople.appspot.com/_ah/remote_api --filename=datadump

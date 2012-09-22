@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+
+    <b> Enter today's temperature </b>
+    <form action="/clothingChoices" method="post">
+      <div><input type="number" name="temperature" required autofocus placeholder="65"></div>
+
+      <div>
+
+    <b> Which kid are you? </b>
+    {% for childToDress in childrenToDress %}
+     <input type="radio" name="kid" value={{ childToDress.kidName|escape }}> {{ childToDress.kidName|escape }}
+    {% endfor %}
+
+      </div>
+      
+      <input type="submit">
+      </div>
+    </form>
+
+    <form action="/sign" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <div><input type="submit" value="Add a child"></div>
+    </form>
+    
+    <a href="{{ url }}">{{ url_linktext }}</a>
+
+  </body>
+</html>

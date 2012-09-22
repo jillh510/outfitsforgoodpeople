@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    <b> {{displayText }} </b>
+
+
+    <form action="/imageUploader" enctype="multipart/form-data" method="post">
+      <div><label>Long-sleeved shirt:</label></div>
+      <div><input type="file" name="ls_shirt_img"/></div>
+            <div><label>Short-sleeved shirt:</label></div>
+      <div><input type="file" name="ss_shirt_img"/></div>
+            <div><label>Pants:</label></div>
+      <div><input type="file" name="pants_img"/></div>
+            <div><label>Shorts:</label></div>
+      <div><input type="file" name="shorts_img"/></div>
+            <div><label>Shoes:</label></div>
+      <div><input type="file" name="shoes_img"/></div>
+            <div><label>Sandals:</label></div>
+      <div><input type="file" name="sandals_img"/></div>
+      <div><input type="submit" value="Upload images"></div>
+    </form>
+
+    <a href="{{ url }}">{{ url_linktext }}</a>
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    <b> {{displayText }} </b>
+
+    {% for clothing in articlesOfClothing %}
+      <blockquote>{{ clothing.name|escape }}</blockquote>
+    
+    {% endfor %}
+
+    <a href="{{ url }}">{{ url_linktext }}</a>
+
+  </body>
+</html>
